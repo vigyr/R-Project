@@ -1,0 +1,6 @@
+library(dplyr)
+df_2<-data.frame(data_cleaned)
+grp2<-group_by(df_2,purpose) %>% summarise(Mean_DTI = mean(dti))
+library(plotly)
+b<-plot_ly(grp2,x=grp2$purpose,y=grp2$Mean_DTI,type="bar",text=grp2$purpose,marker = list(color = 'rgb(165,42,42)',line = list(color = 'rgb(0,0,0)', width = 2))) %>% layout(title = "Mean Debt to Income Ratio For Various Loan Purposes",xaxis = list(title = ""),yaxis = list(title = ""),annotations = list(x=grp2$purpose,y=grp2$Mean_DTI,text=round(grp2$Mean_DTI,digits=2),xanchor = 'center', yanchor = 'bottom',showarrow = FALSE))
+print(b)

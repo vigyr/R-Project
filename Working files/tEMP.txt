@@ -1,0 +1,3 @@
+
+
+c('antiquewhite4','aquamarine4','azure4','bisque4','blue4','blueviolet','brown4','cadetblue4','chartreuse','coral','cyan','darkgoldenrod4','darkred')
